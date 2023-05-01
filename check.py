@@ -28,6 +28,8 @@ imgs_num = len(img_list)
 del_flag = [False for _ in range(imgs_num)]
  
 if __name__ == '__main__':
+    if not os.path.exists(TRASH_BIN):
+        os.makedirs(TRASH_BIN)
     print('Find ' + Color.RED + str(imgs_num) + Color.END + ' images')
     for i in range(imgs_num):
         if LOG_ALL:
